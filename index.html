@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NepalApp — नेपाल कम्युनिटी एप</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<link rel="stylesheet" href="style.css">
+
+ 
+</head>
+<body>
+
+<!-- ── TOP BAR ── -->
+<div class="topbar">
+  <div class="topbar-date">
+    <i class="ti ti-calendar"></i>
+    <span id="today-date"></span> &nbsp;|&nbsp; Bikram Sambat 2083
+  </div>
+  <div class="topbar-lang">
+    <span class="active">English</span>
+    <span>नेपाली</span>
+  </div>
+</div>
+
+<!-- ── HEADER ── -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-mark">न</div>
+      <div class="logo-text">
+        <div class="logo-en">NepalApp</div>
+        <div class="logo-np">नेपाल कम्युनिटी एप</div>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <div class="nav-item nav-item-dropdown">
+        <button class="nav-link active" id="news-nav-trigger" aria-expanded="false" aria-haspopup="true">
+          News
+          <i class="ti ti-chevron-down nav-chevron"></i>
+        </button>
+        <div class="nav-dropdown" id="news-nav-dropdown">
+          <button class="nav-dropdown-item">Local news</button>
+          <button class="nav-dropdown-item">National</button>
+          <button class="nav-dropdown-item">Politics</button>
+          <button class="nav-dropdown-item">Business</button>
+          <button class="nav-dropdown-item">Health</button>
+          <button class="nav-dropdown-item">Education</button>
+          <button class="nav-dropdown-item">Environment</button>
+          <button class="nav-dropdown-item">Culture</button>
+        </div>
+      </div>
+      <button class="nav-link">Sports</button>
+      <button class="nav-link">Weather</button>
+      <button class="nav-link">Business</button>
+      <button class="nav-link">Jobs</button>
+      <button class="nav-link">Events</button>
+      <button class="nav-link">Roads</button>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="search-trigger" aria-label="Search"><i class="ti ti-search"></i></button>
+      <button class="icon-btn" aria-label="Notifications"><i class="ti ti-bell"></i></button>
+      <button class="btn">Sign in</button>
+      <button class="btn btn-primary">Register</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── BREAKING NEWS ── -->
+<div class="breaking-bar">
+  <div class="breaking-label"><i class="ti ti-alert-triangle"></i> Breaking</div>
+  <div class="breaking-ticker">
+    <div class="breaking-ticker-track">
+      <strong>Weather alert:</strong> Heavy monsoon rainfall warning issued for Bagmati and Koshi provinces — all residents advised to remain cautious near riverbanks
+    </div>
+  </div>
+</div>
+
+<!-- ── CATEGORY TABS ── -->
+<div class="cat-bar">
+  <div class="cat-bar-inner">
+    <button class="cat-tab active">All</button>
+    <button class="cat-tab">Local news</button>
+    <button class="cat-tab">National</button>
+    <button class="cat-tab">Politics</button>
+    <button class="cat-tab">Business</button>
+    <button class="cat-tab">Health</button>
+    <button class="cat-tab">Education</button>
+    <button class="cat-tab">Environment</button>
+    <button class="cat-tab">Culture</button>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="page-wrap">
+
+  <!-- FEED -->
+  <main class="feed">
+
+    <!-- District filter -->
+    <div class="district-bar">
+      <button class="district-pill">
+        <i class="ti ti-map-pin"></i>
+        Showing news for <strong>Kathmandu District</strong>
+        <i class="ti ti-chevron-down" style="font-size:13px;"></i>
+      </button>
+      <span class="feed-count">248 articles today</span>
+    </div>
+
+    <!-- Hero article -->
+    <article class="hero-card">
+      <div class="hero-img">
+        <div class="hero-img-placeholder">
+          <i class="ti ti-photo"></i>
+          <span>Featured image</span>
+        </div>
+        <span class="hero-cat-badge">Local news</span>
+      </div>
+      <div class="hero-body">
+        <h1 class="hero-title">Kathmandu Metropolitan City announces major road expansion project connecting Koteshwor to Kalanki corridor</h1>
+        <p class="hero-excerpt">The project, estimated at NPR 4.2 billion, will widen the 8.7km stretch to six lanes and include dedicated cycling paths and pedestrian walkways — the largest urban road investment in Kathmandu in over a decade.</p>
+        <div class="article-meta">
+          <span><i class="ti ti-user"></i> Ramesh Sharma</span>
+          <span><i class="ti ti-clock"></i> 2 hours ago</span>
+          <span><i class="ti ti-book"></i> 4 min read</span>
+          <span><i class="ti ti-message-circle"></i> 34 comments</span>
+          <span><i class="ti ti-eye"></i> 12.4k views</span>
+        </div>
+        <div class="article-actions">
+          <button class="act-btn"><i class="ti ti-thumb-up"></i> 128</button>
+          <button class="act-btn"><i class="ti ti-share"></i> Share</button>
+          <button class="act-btn"><i class="ti ti-brand-whatsapp"></i> WhatsApp</button>
+          <button class="act-btn save"><i class="ti ti-bookmark"></i> Save</button>
+          <button class="act-btn read-more">Read full story <i class="ti ti-arrow-right"></i></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Section: Latest stories -->
+    <div class="section-hd">Latest stories</div>
+    <div class="card-grid">
+      <article class="news-card">
+        <div class="card-thumb"><i class="ti ti-photo"></i></div>
+        <div class="card-body">
+          <div class="card-cat">Politics</div>
+          <div class="card-title">Parliament resumes session with budget debate scheduled for next week</div>
+          <div class="card-meta">
+            <span><i class="ti ti-clock"></i> 3 hrs ago</span>
+            <span><i class="ti ti-message-circle"></i> 21</span>
+          </div>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="card-thumb"><i class="ti ti-photo"></i></div>
+        <div class="card-body">
+          <div class="card-cat">Health</div>
+          <div class="card-title">Free health camp to be held across 12 districts this Saturday</div>
+          <div class="card-meta">
+            <span><i class="ti ti-clock"></i> 5 hrs ago</span>
+            <span><i class="ti ti-message-circle"></i> 8</span>
+          </div>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="card-thumb"><i class="ti ti-photo"></i></div>
+        <div class="card-body">
+          <div class="card-cat">Environment</div>
+          <div class="card-title">Bagmati river clean-up campaign draws over 5,000 volunteers in Kathmandu</div>
+          <div class="card-meta">
+            <span><i class="ti ti-clock"></i> 6 hrs ago</span>
+            <span><i class="ti ti-message-circle"></i> 45</span>
+          </div>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="card-thumb"><i class="ti ti-photo"></i></div>
+        <div class="card-body">
+          <div class="card-cat">Education</div>
+          <div class="card-title">SEE results to be published in Ashadh — board confirms new date</div>
+          <div class="card-meta">
+            <span><i class="ti ti-clock"></i> 8 hrs ago</span>
+            <span><i class="ti ti-message-circle"></i> 17</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Section: More stories -->
+    <div class="section-hd">More stories</div>
+
+    <article class="list-card">
+      <div class="list-thumb"><i class="ti ti-photo"></i></div>
+      <div class="list-body">
+        <div class="list-cat">Business</div>
+        <div class="list-title">Nepal Rastra Bank raises repo rate amid inflation concerns in Terai belt</div>
+        <div class="list-meta">
+          <span><i class="ti ti-clock"></i> 9 hrs ago</span>
+          <span><i class="ti ti-message-circle"></i> 12</span>
+          <span><i class="ti ti-eye"></i> 3.2k views</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="list-card">
+      <div class="list-thumb"><i class="ti ti-photo"></i></div>
+      <div class="list-body">
+        <div class="list-cat">Culture</div>
+        <div class="list-title">Rato Machindranath chariot festival preparations begin in Lalitpur with thousands gathering</div>
+        <div class="list-meta">
+          <span><i class="ti ti-clock"></i> 11 hrs ago</span>
+          <span><i class="ti ti-message-circle"></i> 29</span>
+          <span><i class="ti ti-eye"></i> 5.1k views</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="list-card">
+      <div class="list-thumb"><i class="ti ti-photo"></i></div>
+      <div class="list-body">
+        <div class="list-cat">Opinion</div>
+        <div class="list-title">Why Nepal's digital infrastructure needs urgent investment in rural districts</div>
+        <div class="list-meta">
+          <span><i class="ti ti-clock"></i> 1 day ago</span>
+          <span><i class="ti ti-message-circle"></i> 56</span>
+          <span><i class="ti ti-eye"></i> 8.7k views</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="list-card">
+      <div class="list-thumb"><i class="ti ti-photo"></i></div>
+      <div class="list-body">
+        <div class="list-cat">National</div>
+        <div class="list-title">Government launches new digital ID rollout for all 77 districts by end of fiscal year</div>
+        <div class="list-meta">
+          <span><i class="ti ti-clock"></i> 1 day ago</span>
+          <span><i class="ti ti-message-circle"></i> 38</span>
+          <span><i class="ti ti-eye"></i> 11.3k views</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="list-card">
+      <div class="list-thumb"><i class="ti ti-photo"></i></div>
+      <div class="list-body">
+        <div class="list-cat">Sports</div>
+        <div class="list-title">Nepal national cricket team secures historic win against UAE in T20 series opener</div>
+        <div class="list-meta">
+          <span><i class="ti ti-clock"></i> 2 days ago</span>
+          <span><i class="ti ti-message-circle"></i> 91</span>
+          <span><i class="ti ti-eye"></i> 22.5k views</span>
+        </div>
+      </div>
+    </article>
+
+    <button class="load-more">
+      <i class="ti ti-refresh"></i> Load more stories
+    </button>
+
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <!-- Weather -->
+    <div class="widget">
+      <div class="widget-hd">
+        <div class="widget-title"><i class="ti ti-cloud"></i> Weather</div>
+        <button class="widget-more">7-day →</button>
+      </div>
+      <div class="wx-city">
+        <i class="ti ti-map-pin"></i> <strong>Kathmandu</strong>, Bagmati Province
+        <i class="ti ti-chevron-down" style="font-size:12px;margin-left:2px;"></i>
+      </div>
+      <div class="wx-main">
+        <i class="ti ti-cloud-rain wx-icon"></i>
+        <div>
+          <div class="wx-temp">24°C</div>
+          <div class="wx-desc">Partly cloudy</div>
+          <div class="wx-feels">Feels like 26°C</div>
+        </div>
+      </div>
+      <div class="wx-stats">
+        <div class="wx-stat"><i class="ti ti-droplet"></i> Humidity 78%</div>
+        <div class="wx-stat"><i class="ti ti-wind"></i> Wind 12 km/h</div>
+        <div class="wx-stat"><i class="ti ti-sun"></i> UV Index 6</div>
+        <div class="wx-stat"><i class="ti ti-eye"></i> Vis. 8 km</div>
+      </div>
+      <div class="wx-forecast">
+        <div class="wx-day"><span>Mon</span><i class="ti ti-cloud-rain"></i><span class="hi">22°</span><span class="lo">17°</span></div>
+        <div class="wx-day"><span>Tue</span><i class="ti ti-sun"></i><span class="hi">27°</span><span class="lo">19°</span></div>
+        <div class="wx-day"><span>Wed</span><i class="ti ti-cloud"></i><span class="hi">25°</span><span class="lo">18°</span></div>
+        <div class="wx-day"><span>Thu</span><i class="ti ti-cloud-rain"></i><span class="hi">21°</span><span class="lo">16°</span></div>
+        <div class="wx-day"><span>Fri</span><i class="ti ti-sun"></i><span class="hi">28°</span><span class="lo">20°</span></div>
+      </div>
+    </div>
+
+    <!-- Roads -->
+    <div class="widget">
+      <div class="widget-hd">
+        <div class="widget-title"><i class="ti ti-road"></i> Roads & traffic</div>
+        <button class="widget-more">All roads →</button>
+      </div>
+      <div class="road-list">
+        <div class="road-item">
+          <span class="road-dot green"></span>
+          <span class="road-name">Prithvi Highway</span>
+          <span class="road-status clear">Clear</span>
+        </div>
+        <div class="road-item">
+          <span class="road-dot orange"></span>
+          <span class="road-name">Arniko Highway</span>
+          <span class="road-status delays">Delays</span>
+        </div>
+        <div class="road-item">
+          <span class="road-dot red"></span>
+          <span class="road-name">Tribhuvan Highway</span>
+          <span class="road-status closed">Closed</span>
+        </div>
+        <div class="road-item">
+          <span class="road-dot green"></span>
+          <span class="road-name">Mahendra Highway</span>
+          <span class="road-status clear">Clear</span>
+        </div>
+        <div class="road-item">
+          <span class="road-dot orange"></span>
+          <span class="road-name">Karnali Highway</span>
+          <span class="road-status delays">Caution</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest jobs -->
+    <div class="widget">
+      <div class="widget-hd">
+        <div class="widget-title"><i class="ti ti-briefcase"></i> Latest jobs</div>
+        <button class="widget-more">View all →</button>
+      </div>
+      <div class="job-list">
+        <div class="job-item">
+          <div class="job-type-badge">Full-time</div>
+          <div class="job-title">Software Developer</div>
+          <div class="job-meta">
+            <span><i class="ti ti-building"></i> Leapfrog Technology</span>
+            <span><i class="ti ti-map-pin"></i> Kathmandu</span>
+          </div>
+        </div>
+        <div class="job-item">
+          <div class="job-type-badge">Full-time</div>
+          <div class="job-title">Accountant</div>
+          <div class="job-meta">
+            <span><i class="ti ti-building"></i> Himalayan Bank</span>
+            <span><i class="ti ti-map-pin"></i> Pokhara</span>
+          </div>
+        </div>
+        <div class="job-item">
+          <div class="job-type-badge">Contract</div>
+          <div class="job-title">Field Officer — NGO</div>
+          <div class="job-meta">
+            <span><i class="ti ti-building"></i> Save the Children</span>
+            <span><i class="ti ti-map-pin"></i> Dhangadhi</span>
+          </div>
+        </div>
+      </div>
+      <button class="widget-cta"><i class="ti ti-plus"></i> Post a job</button>
+    </div>
+
+    <!-- Events -->
+    <div class="widget">
+      <div class="widget-hd">
+        <div class="widget-title"><i class="ti ti-calendar-event"></i> Upcoming events</div>
+        <button class="widget-more">All events →</button>
+      </div>
+      <div class="event-list">
+        <div class="event-item">
+          <div class="event-date"><span class="month">Jun</span><span class="day">15</span></div>
+          <div class="event-info">
+            <div class="event-name">Rato Machindranath Festival</div>
+            <div class="event-loc"><i class="ti ti-map-pin"></i> Lalitpur</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-date"><span class="month">Jun</span><span class="day">20</span></div>
+          <div class="event-info">
+            <div class="event-name">Kathmandu Tech Summit 2026</div>
+            <div class="event-loc"><i class="ti ti-map-pin"></i> Kathmandu</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <div class="event-date"><span class="month">Jun</span><span class="day">28</span></div>
+          <div class="event-info">
+            <div class="event-name">Terai Agriculture Fair</div>
+            <div class="event-loc"><i class="ti ti-map-pin"></i> Birgunj</div>
+          </div>
+        </div>
+      </div>
+      <button class="widget-cta"><i class="ti ti-plus"></i> Submit an event</button>
+    </div>
+
+    <!-- Premium -->
+    <div class="widget premium-widget">
+      <div class="widget-hd">
+        <div class="widget-title"><i class="ti ti-star"></i> Go Premium</div>
+      </div>
+      <p class="premium-desc">Support local journalism and unlock an enhanced reading experience.</p>
+      <ul class="premium-features">
+        <li><i class="ti ti-check"></i> Ad-free reading experience</li>
+        <li><i class="ti ti-check"></i> Access to premium articles</li>
+        <li><i class="ti ti-check"></i> Offline article saving</li>
+        <li><i class="ti ti-check"></i> Priority breaking news alerts</li>
+      </ul>
+      <div class="premium-price">From <strong>NPR 200</strong> / month</div>
+      <button class="btn-gold">Start 7-day free trial</button>
+    </div>
+
+  </aside>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-mark">न</div>
+        <div class="logo-text">
+          <div class="logo-en">NepalApp</div>
+          <div class="logo-np">नेपाल कम्युनिटी एप</div>
+        </div>
+      </div>
+      <p class="footer-tagline">Trusted local news, community services, and hyperlocal information for every district of Nepal.</p>
+      <div class="footer-socials">
+        <div class="social-btn"><i class="ti ti-brand-facebook"></i></div>
+        <div class="social-btn"><i class="ti ti-brand-twitter"></i></div>
+        <div class="social-btn"><i class="ti ti-brand-instagram"></i></div>
+        <div class="social-btn"><i class="ti ti-brand-youtube"></i></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Sections</h4>
+      <ul>
+        <li>News</li>
+        <li>Sports</li>
+        <li>Weather</li>
+        <li>Business directory</li>
+        <li>Jobs board</li>
+        <li>Events</li>
+        <li>Roads</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li>About us</li>
+        <li>Our team</li>
+        <li>Careers</li>
+        <li>Advertise with us</li>
+        <li>Contact us</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li>Help centre</li>
+        <li>Community guidelines</li>
+        <li>Report an issue</li>
+        <li>Submit a tip</li>
+        <li>Apps</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 NepalApp — नेपाल कम्युनिटी एप. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <span>Privacy policy</span>
+      <span>Terms of use</span>
+      <span>Cookie settings</span>
+      <span>Sitemap</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── SEARCH OVERLAY ── -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="ti ti-search"></i>
+      <input class="search-input" type="text" placeholder="Search news, articles, businesses…" autofocus />
+      <button class="search-close" id="search-close"><i class="ti ti-x"></i></button>
+    </div>
+    <div class="search-hints">
+      <div class="search-hint-label">Trending searches</div>
+      <div class="search-tags">
+        <span class="search-tag">Monsoon 2026</span>
+        <span class="search-tag">SEE results</span>
+        <span class="search-tag">Nepal cricket</span>
+        <span class="search-tag">Dashain 2083</span>
+        <span class="search-tag">Kathmandu jobs</span>
+        <span class="search-tag">Road closures</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* Date in topbar */
+  const d = new Date();
+  const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('today-date').textContent = d.toLocaleDateString('en-GB', opts);
+
+  /* Category tabs */
+  document.querySelectorAll('.cat-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+
+  /* Nav links */
+  document.querySelectorAll('.main-nav > .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.main-nav > .nav-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  /* Search overlay */
+  const overlay = document.getElementById('search-overlay');
+  document.getElementById('search-trigger').addEventListener('click', () => {
+    overlay.classList.add('open');
+    setTimeout(() => overlay.querySelector('.search-input').focus(), 50);
+  });
+  document.getElementById('search-close').addEventListener('click', () => overlay.classList.remove('open'));
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('open'); });
+
+  /* Load more */
+  document.querySelector('.load-more').addEventListener('click', function() {
+    this.innerHTML = '<i class="ti ti-loader-2" style="animation:spin 0.8s linear infinite"></i> Loading…';
+    setTimeout(() => {
+      this.innerHTML = '<i class="ti ti-refresh"></i> Load more stories';
+    }, 1500);
+  });
+
+  /* Spin keyframe for loader */
+  const style = document.createElement('style');
+  style.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+  document.head.appendChild(style);
+</script>
+<script src="main.js"></script>
+</body>
+</html>
